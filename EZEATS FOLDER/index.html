@@ -1,0 +1,486 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EZeats - Skip the Line. Enjoy Your Meal.</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" 
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" 
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="ezeats.css">
+</head>
+<body>
+
+    <!-- Group 5 -->
+    <nav class="navbar navbar-expand-md navbar-dark">
+        <a class="navbar-brand" href="#home">
+            <img src="EZEats Logo.png" alt="EZeats Logo">
+        </a>
+
+        <button class="navbar-toggler" type="button"
+                data-toggle="collapse" data-target="#collapsibleNavbar"
+                aria-controls="collapsibleNavbar"
+                aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="collapsibleNavbar">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link active" href="#home">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#menu">Menu</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#orders">Orders</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link cart-nav-link" href="#foodCart">
+                        Cart <span id="cartCount" class="cart-count">0</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="btn-login-pill" href="#"
+                       data-toggle="modal" data-target="#loginModal">
+                        Log In
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Group 5 -->
+    <section class="hero" id="home">
+        <div class="hero-text">
+            <h1>Skip the Line.<br>Enjoy Your Meal.</h1>
+            <p>
+                Order your cafeteria food in advance and
+                pick it up when it's ready.
+            </p>
+            <div class="hero-buttons">
+                <a href="#menu" class="btn-primary-custom">Order Now</a>
+                <a href="#menu" class="btn-secondary-custom">View Menu</a>
+            </div>
+        </div>
+
+        <div class="hero-graphics">
+            <img src="Cafeteria.png" alt="Cafeteria Background"
+                 class="bg-cafeteria">
+            <div class="hero-characters">
+                <img src="Student.png" alt="Student with meal"
+                     class="img-student">
+                <img src="Phone.png" alt="EZeats Mobile App"
+                     class="img-phone">
+            </div>
+        </div>
+    </section>
+
+    <!-- Group 5 -->
+    <section class="how-it-works">
+        <h2 class="section-title">How EZeats Works</h2>
+
+        <div class="steps-container">
+            <div class="step-card">
+                <div class="step-icon-wrapper">
+                    <span class="step-badge">1</span>
+                    <img src="Browser.png" alt="Browse" class="step-icon">
+                </div>
+                <h3>Browse</h3>
+                <p>Check the available food and prices.</p>
+            </div>
+
+            <div class="step-card">
+                <div class="step-icon-wrapper">
+                    <span class="step-badge">2</span>
+                    <img src="Order.png" alt="Order" class="step-icon">
+                </div>
+                <h3>Order</h3>
+                <p>
+                    Choose your food and place your order
+                    before going to the cafeteria.
+                </p>
+            </div>
+
+            <div class="step-card">
+                <div class="step-icon-wrapper">
+                    <span class="step-badge">3</span>
+                    <img src="Pick Up.png" alt="Pick Up" class="step-icon">
+                </div>
+                <h3>Pick Up</h3>
+                <p>
+                    Get notified when your order is ready
+                    and pick it up without waiting in a long line.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Group 5 -->
+    <section class="why-ezeats">
+        <h2 class="section-title">Why EZeats?</h2>
+
+        <div class="features-container">
+            <div class="feature-item">
+                <div class="feature-icon-wrapper">
+                    <img src="Time.png" alt="Clock" class="feature-icon">
+                </div>
+                <p>Less waiting time</p>
+            </div>
+
+            <div class="feature-item">
+                <div class="feature-icon-wrapper">
+                    <img src="Foods.png" alt="Food" class="feature-icon">
+                </div>
+                <p>See available food</p>
+            </div>
+
+            <div class="feature-item">
+                <div class="feature-icon-wrapper">
+                    <img src="Organize Orders.png" alt="Orders"
+                         class="feature-icon">
+                </div>
+                <p>Organize orders</p>
+            </div>
+
+            <div class="feature-item">
+                <div class="feature-icon-wrapper">
+                    <img src="Notif.png" alt="Notification"
+                         class="feature-icon">
+                </div>
+                <p>Know when your order is ready</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Group 5 -->
+    <section class="menu-section" id="menu">
+        <div class="menu-intro">
+            <div>
+                <span class="cart-eyebrow">FRESH FROM THE CAFETERIA</span>
+                <h2 class="section-title">Today's Available Food</h2>
+                <p class="menu-subtitle">
+                    Choose your favorites and customize your order.
+                </p>
+            </div>
+
+            <label class="menu-search">
+                <span aria-hidden="true">⌕</span>
+                <input id="menuSearch" type="search"
+                       placeholder="Search foods..."
+                       aria-label="Search foods">
+            </label>
+        </div>
+
+        <div class="menu-container" id="menuContainer">
+            <article class="menu-card" data-name="sisig meal">
+                <div class="menu-image">
+                    <img src="sisig_meal.jpg"
+                         alt="Sisig Meal" loading="lazy">
+                </div>
+                <h3>Sisig Meal</h3>
+                <div class="menu-card-bottom">
+                    <strong>₱80.00</strong>
+                    <button type="button" class="add-cart-btn" data-id="1">
+                        Add to Order
+                    </button>
+                </div>
+            </article>
+
+            <article class="menu-card" data-name="coca-cola can">
+                <div class="menu-image">
+                    <img src="coke_can.webp"
+                         alt="Coca-Cola Can" loading="lazy">
+                </div>
+                <h3>Coca-Cola Can</h3>
+                <div class="menu-card-bottom">
+                    <strong>₱30.00</strong>
+                    <button type="button" class="add-cart-btn" data-id="2">
+                        Add to Order
+                    </button>
+                </div>
+            </article>
+
+            <article class="menu-card" data-name="1 piece turon">
+                <div class="menu-image">
+                    <img src="turon.jpg"
+                         alt="1 Piece Turon" loading="lazy">
+                </div>
+                <h3>1 Piece Turon</h3>
+                <div class="menu-card-bottom">
+                    <strong>₱15.00</strong>
+                    <button type="button" class="add-cart-btn" data-id="3">
+                        Add to Order
+                    </button>
+                </div>
+            </article>
+
+            <article class="menu-card" data-name="sinigang meal">
+                <div class="menu-image">
+                    <img src="sinigang_meal.webp"
+                         alt="Sinigang Meal" loading="lazy">
+                </div>
+                <h3>Sinigang Meal</h3>
+                <div class="menu-card-bottom">
+                    <strong>₱80.00</strong>
+                    <button type="button" class="add-cart-btn" data-id="4">
+                        Add to Order
+                    </button>
+                </div>
+            </article>
+
+            <article class="menu-card" data-name="chicken meal">
+                <div class="menu-image">
+                    <img src="chicken_meal.webp"
+                         alt="Chicken Meal" loading="lazy">
+                </div>
+                <h3>Chicken Meal</h3>
+                <div class="menu-card-bottom">
+                    <strong>₱50.00</strong>
+                    <button type="button" class="add-cart-btn" data-id="5">
+                        Add to Order
+                    </button>
+                </div>
+            </article>
+        </div>
+
+        <p id="noMenuResults" hidden>No matching food found.</p>
+    </section>
+
+    <!-- Group 5 -->
+    <section class="food-cart-section" id="foodCart">
+        <div class="cart-heading">
+            <div>
+                <span class="cart-eyebrow">YOUR ORDER</span>
+                <h2>My Food Cart</h2>
+                <p>Review your food before placing your order.</p>
+            </div>
+            <a href="#menu" class="continue-shopping">
+                + Add More Food
+            </a>
+        </div>
+
+        <div class="cart-layout">
+            <div class="cart-items-panel">
+                <div class="cart-panel-heading">
+                    <h3>Your Items</h3>
+                    <button type="button" id="clearCartBtn"
+                            class="clear-cart-btn">
+                        Clear Cart
+                    </button>
+                </div>
+
+                <div id="cartItems">
+                    <!-- Cart items generated by JavaScript -->
+                </div>
+
+                <div id="emptyCart" class="empty-cart">
+                    <div class="empty-cart-icon" aria-hidden="true">○</div>
+                    <h3>Your cart is empty!</h3>
+                    <p>Looks like you haven't added anything yet.</p>
+                    <a href="#menu" class="btn-primary-custom">
+                        Browse Menu
+                    </a>
+                </div>
+            </div>
+
+            <!-- Group 5 -->
+            <aside class="order-summary">
+                <h3>Order Summary</h3>
+                <div class="summary-row">
+                    <span>Subtotal</span>
+                    <strong id="subtotal">₱0.00</strong>
+                </div>
+                <div class="summary-row">
+                    <span>Pickup Fee</span>
+                    <strong class="free-label">FREE</strong>
+                </div>
+                <hr>
+                <div class="summary-row total-row">
+                    <span>Total</span>
+                    <strong id="cartTotal">₱0.00</strong>
+                </div>
+                <p class="summary-note">
+                    Pick up your order at the cafeteria once it's ready.
+                </p>
+                <button type="button" class="checkout-btn"
+                        id="checkoutBtn" disabled>
+                    Proceed to Checkout
+                </button>
+                <div class="secure-order-note">
+                    Fast and convenient cafeteria pickup
+                </div>
+            </aside>
+        </div>
+    </section>
+
+    <!-- Group 5 -->
+    <div class="mobile-checkout-bar" id="mobileCheckoutBar">
+        <div class="mobile-total">
+            <small>Total Amount</small>
+            <strong id="mobileCartTotal">₱0.00</strong>
+        </div>
+        <button type="button" id="mobileCheckoutBtn"
+                class="mobile-checkout-btn" disabled>
+            Checkout →
+        </button>
+    </div>
+
+    <!-- Group 5 -->
+    <section class="orders-section" id="orders">
+        <h2 class="section-title">My Orders</h2>
+        <p>
+            Your order history will appear here once
+            the ordering system is connected.
+        </p>
+    </section>
+
+    <footer class="EzeatsFooter">
+        <div class="container-fluid">
+            <div class="row align-items-center">
+                <div class="col-12 col-md-4 footer-logo">
+                    <a href="#home">
+                        <img src="EZEats Logo.png" alt="EZeats Logo">
+                    </a>
+                </div>
+                <div class="col-12 col-md-4 footer-contact">
+                    <h4>Contact Us</h4>
+                    <p>Contact No.: (02) 1234 5678</p>
+                    <p>Email: ezeats@email.com</p>
+                </div>
+                <div class="col-12 col-md-4 footer-address">
+                    <h4>Address</h4>
+                    <p>
+                        Technological Institute of the Philippines<br>
+                        Quezon City, Philippines
+                    </p>
+                </div>
+            </div>
+            <hr>
+            <div class="footer-bottom">
+                <p>© 2026 EZeats. All rights reserved</p>
+            </div>
+        </div>
+    </footer>
+
+    <div class="modal fade" id="loginModal" tabindex="-1"
+         role="dialog" aria-labelledby="loginModalLabel"
+         aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content login-modal-content">
+                <div class="modal-header border-0">
+                    <button type="button" class="close"
+                            data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+
+                <div class="modal-body px-4 pb-4 pt-0">
+                    <div class="text-center mb-4">
+                        <img src="EZEats Logo.png" alt="EZeats Logo"
+                             class="modal-logo">
+                        <h4 class="modal-title font-weight-bold mt-2"
+                            id="loginModalLabel">
+                            Welcome Back!
+                        </h4>
+                        <p class="text-muted small">
+                            Please enter your details to log in.
+                        </p>
+                    </div>
+
+                    <form id="loginForm">
+                        <div class="form-group">
+                            <label class="form-label" for="loginEmail">
+                                Email or Student ID
+                            </label>
+                            <input type="text" id="loginEmail"
+                                   class="form-control custom-input"
+                                   placeholder="Enter your email or ID"
+                                   required>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="form-label" for="loginPassword">
+                                Password
+                            </label>
+                            <input type="password" id="loginPassword"
+                                   class="form-control custom-input"
+                                   placeholder="Enter your password"
+                                   required>
+                        </div>
+
+                        <div class="d-flex justify-content-between align-items-center mb-4">
+                            <div class="custom-control custom-checkbox">
+                                <input type="checkbox"
+                                       class="custom-control-input"
+                                       id="rememberMe">
+                                <label class="custom-control-label small"
+                                       for="rememberMe">
+                                    Remember me
+                                </label>
+                            </div>
+                            <a href="#" class="small forgot-link">
+                                Forgot Password?
+                            </a>
+                        </div>
+
+                        <button type="submit"
+                                class="btn btn-primary-custom btn-block py-2">
+                            Log In
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Group 5 -->
+    <div class="customize-overlay" id="customizeOverlay" hidden>
+        <div class="customize-dialog" role="dialog"
+             aria-modal="true" aria-labelledby="customizeTitle"
+             tabindex="-1">
+            <div class="customize-top">
+                <span class="cart-eyebrow">MAKE IT YOURS</span>
+                <button type="button" id="closeCustomize"
+                        class="modal-x" aria-label="Close">×</button>
+            </div>
+
+            <div class="customize-food">
+                <div class="customize-image">
+                    <img id="customizeImage" alt="">
+                </div>
+                <div>
+                    <h2 id="customizeTitle"></h2>
+                    <p id="customizeBasePrice"></p>
+                </div>
+            </div>
+
+            <h3>Would you like to add anything?</h3>
+            <p class="customize-hint">
+                Optional extras. Select as many as you like.
+            </p>
+
+            <div id="addonOptions" class="addon-options"></div>
+
+            <div class="customize-bottom">
+                <div>
+                    <small>Item total</small>
+                    <strong id="customizeTotal">₱0.00</strong>
+                </div>
+                <button type="button" id="confirmAdd"
+                        class="checkout-btn">
+                    Add to Cart
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" 
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="ezeats.js"></script>
+</body>
+</html>
